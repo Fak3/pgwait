@@ -1,5 +1,11 @@
 This command-line tool reads django settings, then tries to connect to configured postgresql server until connection succeeds. It is useful on service startup, when you want to launch migrations right after postgres database gets ready.
 
+## Installation
+
+```
+pip install pgwait
+```
+
 ## Usage
 To wait before migrations:
 
