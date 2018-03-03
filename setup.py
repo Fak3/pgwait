@@ -1,11 +1,17 @@
 from setuptools import setup, find_packages
 
+try:
+    import pypandoc
+    description = pypandoc.convert('README.md', 'rst')
+except (IOError, ImportError):
+    description = open('README.md').read()
+
 
 setup(
     name='pgwait',
-    version='0.1',
+    version='0.2',
     description='wait for postgres defined in django settings to be up',
-    long_description='pgwait path.to.settings',
+    long_description=description,
     author='Roman Evstifeev',
     author_email='someuniquename@gmail.com',
     url='https://github.com/Fak3/pgwait',
