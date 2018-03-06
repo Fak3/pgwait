@@ -9,17 +9,17 @@ except (IOError, ImportError):
 
 setup(
     name='pgwait',
-    version='0.2',
+    version='0.3',
     description='wait for postgres defined in django settings to be up',
     long_description=description,
     author='Roman Evstifeev',
     author_email='someuniquename@gmail.com',
     url='https://github.com/Fak3/pgwait',
     license='MIT',
-    py_modules=['wait_for_postgres'],
+    py_modules=['pgwait'],
     include_package_data=True,
     entry_points={
-        'console_scripts': ['pgwait = wait_for_postgres:main'],
+        'console_scripts': ['pgwait = pgwait:main'],
     },
     classifiers = [
         'Development Status :: 4 - Beta',
