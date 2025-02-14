@@ -35,3 +35,6 @@ distribution = true
 [project.scripts]
 # Install executable cli app with this package distribution.
 pgwait = "pgwait:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Fak3/pgwait"
