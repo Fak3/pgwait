@@ -29,7 +29,7 @@ def main():
         try:
             psycopg2.connect(args % DB)
         except Exception as e:
-            print('%s Attempt %d failed, retrying in 2 seconds' % (e, attempt))
+            print('pgwait: %s Attempt %d failed, retrying in 2 seconds' % (e, attempt))
             attempt += 1
             time.sleep(2)
         else:
