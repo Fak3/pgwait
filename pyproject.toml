@@ -1,0 +1,37 @@
+[project]
+name = "pgwait"
+version = "0.4"
+description = "wait for postgres defined in django settings to be up"
+authors = [
+    {name = "Evstifeev Roman", email = "someuniquename@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+keywords = ["postgresql", "postgres", "cli", "database", "rdbms", "django"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+
+[project.scripts]
+# Install executable cli app with this package distribution.
+pgwait = "pgwait:main"
